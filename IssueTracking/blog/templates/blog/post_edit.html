@@ -1,0 +1,24 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="row">
+      <h1 class="new_post" "form">Issue</h1>
+      <form method="POST" class="post-form">{% csrf_token %}
+          <p class="form"><p class=fields>TITLE: </p>{{ form.title }} </p>
+          <p class="form"><p class=fields>DESC: </p>{{ form.desc }} </p>
+          <p class="form"><p class=fields>DUE DATE: </p>{{ form.dueDate }}</p>
+          <div class="col-md-6">
+            <p class="form"><p class=fields>COMPLEXITY: </p>{{ form.complexity }}</p>
+          </div>
+          <div class="col-md-6 ">
+            <p class="form"><p class=fields>STATUS: </p>{{ form.status }}</p>
+          </div>
+          <button type="submit" class="save btn btn-success" class="save">Save</button>
+      </form>
+    </div>
+<script type="text/javascript" src="/admin/jsi18n/"></script>
+<script type="text/javascript" src="/static/admin/js/core.js"></script>
+<script type="text/javascript" src="/static/admin/js/calendar.js"></script>
+<script type="text/javascript" src="/static/admin/js/admin/DateTimeShortcuts.js"></script>
+
+{% endblock %}

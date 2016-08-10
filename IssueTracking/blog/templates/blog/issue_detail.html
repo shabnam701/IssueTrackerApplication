@@ -1,0 +1,29 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="post">
+      <div class="row">
+        <div class="col-md-8">
+          {% if post.createdOn %}
+              <div class="date">
+                  {{ post.createdOn }}
+              </div>
+          {% endif %}
+        </div>
+        <div class="col-md-4 right">
+          {% if user.is_authenticated %}
+            <a class="btn btn-success" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a class="btn btn-default" href="{% url 'issue_remove' pk=post.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+
+          {% endif %}
+        </div>
+      </div>
+        <h1>{{ post.title }}</h1>
+        <p class="detail"><strong>Description: </strong>{{ post.desc|linebreaksbr }}</p>
+        <p class="detail"><strong>Due Date: </strong>{{ post.dueDate|linebreaksbr }}</p>
+        <p class="detail"><strong>Created On: </strong>{{ post.createdOn|linebreaksbr }}</p>
+        <p class="detail"><strong>Complexity: </strong>{{ post.complexity|linebreaksbr }}</p>
+        <p class="detail"><strong>Status: </strong>{{ post.status|linebreaksbr }}</p>
+
+    </div>
+{% endblock %}

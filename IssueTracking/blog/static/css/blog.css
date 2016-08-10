@@ -1,0 +1,166 @@
+.page-header {
+    background-color: #723082;
+    margin-top: 0;
+    font-size: 43px;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    padding-left: 50px;
+    font-family: 'Bitter', serif;
+}
+
+body{
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.page-header a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.page-header a:hover {
+  text-decoration: underline overline;;
+
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+.content {
+    margin-left: 40px;
+}
+
+.date {
+    color: #828282;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
+.post {
+  box-shadow: 0 0 10px #eee;
+  padding: 10px;
+  margin: 15px;
+  border-radius: 2px;
+}
+
+.post a {
+    color: #723082;
+    font-family: 'Bitter', serif;
+
+}
+
+
+.post h1 {
+  font-size: 25px;
+  margin-top: 0;
+  color: #723082;
+  font-family: 'Bitter', serif;
+
+
+}
+
+#main_container{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.new-issue{
+  color: #fff;
+  font-size: 16;
+  margin-right: 15px;
+  font-family: 'Bitter', serif;
+  background-image: linear-gradient(to bottom,#039BE5 0,#0288D1 100%);
+  background-image: linear-gradient(to top,#039BE5 0,#0288D1 100%);
+  background-repeat: repeat-y;;
+
+}
+
+#login_info_container {
+  text-align: right;
+  padding-right: 40px;
+}
+
+.login-info {
+  font-size: 17px;
+}
+
+.right{
+    text-align: right;
+}
+
+.save {
+  padding-left:12px;
+  padding-right: 15px;
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-family: 'Bitter', serif;
+
+}
+
+.new_post {
+  font-size: 25px;
+  padding: none;
+  font-family: 'Bitter', serif;
+
+}
+
+.fields{
+  font-weight: bold;
+  text-align: left;
+
+}
+.form{
+  font-size: 20px;
+  font-weight: bold;
+
+}
+
+.detail{
+
+  padding-bottom: 10px;
+}
+
+.login{
+  font-family: 'Bitter', serif;
+  text-align: center;
+  margin-left: 100px;
+  margin-top: 10px;
+  color:#fff;
+  padding-left: 10px;
+  background-image: linear-gradient(to bottom,#039BE5 0,#0288D1 100%);
+  background-image: linear-gradient(to top,#039BE5 0,#0288D1 100%);
+
+}
+.login-box{
+  border: 1px solid #EFEBE9;;
+  padding-left: 15px;
+  padding-bottom: 15px;
+
+}
+ .login-field{
+   padding-top: 15px;
+   padding-bottom: 10px;
+   margin-bottom: 20px;
+   font-size: 18px;
+   font-family: 'Bitter', serif;
+}

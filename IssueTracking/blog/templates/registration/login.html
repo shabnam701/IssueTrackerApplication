@@ -1,0 +1,28 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+<div class="row login-box">
+  {% if form.errors %}
+    <p>Your username and password didn't match. Please try again.</p>
+  {% endif %}
+
+  <form class="form" method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    <table>
+      <tr class="col-md-12">
+        <td class="login-field">{{ form.username.label_tag }}</td>
+        <td>{{ form.username }}</td>
+      </tr>
+      <tr class="col-md-12">
+        <td class="login-field">{{ form.password.label_tag }}</td>
+        <td>{{ form.password }}</td>
+      </tr>
+    </table>
+    <div class="col-md-12">
+      <input class="login" type="submit" value="Login" />
+      <input type="hidden" name="next" value="{{ next }}" />
+    </div>
+  </form>
+</div>
+
+{% endblock %}

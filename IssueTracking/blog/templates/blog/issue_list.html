@@ -1,0 +1,27 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+  {% for post in posts %}
+    <div class="post">
+      <div class="row">
+        <div class="date col-md-8">
+          <p>Created On: {{ post.createdOn }}</p>
+        </div>
+        <div class="col-md-4 right">
+          <span class="label label-success">{{ post.status|linebreaksbr }}</span>
+        </div>
+      </div>
+      <div>
+          <h1 ><a href="{% url 'issue_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <strong>Complexity:</strong> {{ post.complexity|linebreaksbr }}
+        </div>
+        <div class="col-md-6 right">
+          <strong>Due Date: </strong>{{ post.dueDate|linebreaksbr }}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+{% endblock %}

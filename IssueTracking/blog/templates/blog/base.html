@@ -1,0 +1,36 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Issue Tracker</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link href='https://fonts.googleapis.com/css?family=Bitter:700' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+      <div class="page-header row">
+        <div class="col-md-8 col-sm-8">
+          <a href="{% url 'blog.views.issue_list' %}">ISSUE TRACKER</a>
+        </div>
+        <div class="col-md-4 col-sm-4" id="login_info_container">
+          {% if user.is_authenticated %}
+            <p class="login-info">Hello {{ user.username }} |<a href="{% url 'logout' %}"> Log out</a></p>
+          {% else %}
+            <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
+          {% endif %}
+        </div>
+      </div>
+      <div id="main_container">
+        <div class="right">
+          {% if user.is_authenticated %}
+            <button class="btn btn-primary new-issue" onclick="location.href='{% url 'post_new' %}';">
+              <span class="glyphicon glyphicon-plus"></span>
+              New Issue
+            </button>
+          {% endif %}
+        </div>
+        {% block content %}
+        {% endblock %}
+      </div>
+    </body>
+</html>
