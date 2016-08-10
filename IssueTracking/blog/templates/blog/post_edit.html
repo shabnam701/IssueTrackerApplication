@@ -5,8 +5,8 @@
       <h1 class="new_post" "form">Issue</h1>
       <form method="POST" class="post-form">{% csrf_token %}
           <p class="form"><p class=fields>TITLE: </p>{{ form.title }} </p>
-          <p class="form"><p class=fields>DESC: </p>{{ form.desc }} </p>
-          <p class="form"><p class=fields>DUE DATE: </p>{{ form.dueDate }}</p>
+          <p class="form"><p class=fields>DESCRIPTION: </p>{{ form.desc }} </p>
+          <p class="form"><p class=fields>DUE DATE(yyyy-mm-dd): </p>{{ form.dueDate }}</p>
           <div class="col-md-6">
             <p class="form"><p class=fields>COMPLEXITY: </p>{{ form.complexity }}</p>
           </div>
